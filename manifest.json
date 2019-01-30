@@ -1,0 +1,12 @@
+{
+  "name": "Event Dispatcher",
+  "short_name": "Event Dispatcher",
+  "description": "This extension allows dispatching events on selected elements",
+  "version": "0.0.1",
+  "devtools_page": "./src/devtools.html",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["./src/content-script.js"]
+  }]
+}
