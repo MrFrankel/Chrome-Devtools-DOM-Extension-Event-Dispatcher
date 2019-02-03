@@ -1,9 +1,9 @@
-# Chrome-Devtools-Extension-Event-Dispatcher
+# Chrome-Devtools-Extension-DOM-Event-Dispatcher
 
-Chrome Devtools Extension For Dispatching Events On selected Elements
+Chrome Devtools Extension For Dispatching DOM Events On selected Elements
 
 
-![alt text](./ScreenShot2.png)
+![alt text](./screen2.png)
 
-![alt text](./ScreenShot1.png)
+![alt text](./shot1.png)
 
