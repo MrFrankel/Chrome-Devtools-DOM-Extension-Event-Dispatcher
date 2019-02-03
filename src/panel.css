@@ -17,13 +17,14 @@ label {
 .select-style {
   border-bottom: 1px solid #ccc;
   width: 140px;
-  border-radius: 3px;
+  border-radius: 0;
   overflow: hidden;
   background-image: url("drop-down-arrow.png");
   background-repeat: no-repeat;
   background-position: 90% 50%;
   background-color: #fafafa;
   background-size: 10px;
+
 }
 
 
