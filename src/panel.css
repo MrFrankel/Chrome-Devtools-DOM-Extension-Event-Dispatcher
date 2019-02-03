@@ -1,4 +1,9 @@
-.line{
+body {
+  margin: 40px;
+  font-size: 18px
+}
+
+.line {
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -9,16 +14,21 @@ label {
   margin-right: 5px;
 }
 
-input {
-  height: 18px;
-  border-radius: 4px;
-}
 .select-style {
-  border: 1px solid #ccc;
-  width: 120px;
+  border-bottom: 1px solid #ccc;
+  width: 140px;
   border-radius: 3px;
   overflow: hidden;
-  background: #fafafa url("drop-down-arrow.png") no-repeat 90% 50%;
+  background-image: url("drop-down-arrow.png");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-color: #fafafa;
+  background-size: 10px;
+}
+
+
+.select-style.selected {
+  border-color: #26a69a;
 }
 
 .select-style select {
@@ -29,21 +39,155 @@ input {
   background: transparent;
   background-image: none;
   -webkit-appearance: none;
+  font-size: 18px
 }
+
+
 
 .select-style select:focus {
   outline: none;
 }
 
-.button{
-  border: none;
-  color: black;
-  display: inline-block;
-  padding: 6px 15px 7px;
-  font-size: 14px;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: rgb(202, 60, 60); /* this is a maroon */
-  margin-left: 20px;
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+input 				{
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:120px;
+  border:none;
+  border-bottom:1px solid #757575;
+  font-size: 18px
+}
+input:focus 		{ outline:none; }
+
+label {
+  color: #999;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  color: #5264AE;
+  opacity: 0;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 135px;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #26a69a;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #26a69a;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #26a69a;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #26a69a;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.button {
+  background-color: #e84636 !important;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  letter-spacing: .5px;
+  font-size: 14px;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}

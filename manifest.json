@@ -1,6 +1,6 @@
 {
-  "name": "Event Dispatcher",
-  "short_name": "Event Dispatcher",
+  "name": "DOM Events Dispatcher",
+  "short_name": "DOM Events Dispatcher",
   "description": "This extension allows dispatching events on selected elements",
   "version": "0.0.1",
   "devtools_page": "./src/devtools.html",

@@ -9,10 +9,11 @@
   <link href="panel.css" rel="stylesheet">
 </head>
 <body>
+<h2>Dispatch Event:</h2>
 <div class="line">
-  <label for="eventName">Select Event:</label>
   <div class="select-style">
     <select id="eventName">
+      <option value="" disabled selected>Basic</option>
       <option value="click">click</option>
       <option value="mousedown">mousedown</option>
       <option value="mouseup">mouseup</option>
@@ -23,12 +24,19 @@
       <option value="blur">blur</option>
     </select>
   </div>
-  <button class="button" id="dispatchBtn">dispatch</button>
+  <button class="button" id="dispatchBtn">Dispatch</button>
 </div>
+<br/>
+<div style="margin-left: 20px">OR</div>
 <div class="line">
-  <label for="customEventName">Select Custom Event:</label>
-  <input id="customEventName"/>
-  <button class="button" id="dispatchCustomBtn">dispatch</button>
+  <div class="group">
+    <input id="customEventName" type="text" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Custom</label>
+  </div>
+  <button class="button" id="dispatchCustomBtn">Dispatch</button>
+
 </div>
 </body>
 <script src="panel.js"></script>
