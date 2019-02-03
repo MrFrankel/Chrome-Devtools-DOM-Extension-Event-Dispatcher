@@ -2,7 +2,7 @@
   "name": "DOM Events Dispatcher",
   "short_name": "DOM Events Dispatcher",
   "description": "This extension allows dispatching events on selected elements",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devtools_page": "./src/devtools.html",
   "manifest_version": 2,
   "content_scripts": [{
